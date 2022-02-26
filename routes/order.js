@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var firebase = require('./fire')
+var bodyParser = require('body-parser')
+var db = firebase.firestore()
+router.use(bodyParser.json())
 
 var Order = require('../models/order');
 
@@ -18,7 +22,7 @@ router.get('/',function(req,res,next){
 		var tampilData = data.map(item=>{
 			return {
 				id:item.id,
-				tiket_id:item.tiket_id,
+				user_id:item.user_id,
 				nama:item.nama,
 				response_midtrans:JSON.parse(item.response_midtrans),
 				createdAt:item.createdAt,
@@ -44,17 +48,18 @@ router.post('/charge', function(req,res,next){
 	coreApi.charge(req.body).then((chargeResponse)=>{
 		var dataOrder = {
 			id:chargeResponse.order_id,
-			tiket_id:req.body.tiket_id,
+			user_id: req.body.user_id,
+			email:req.body.email,
 			nama:req.body.nama,
 			response_midtrans:JSON.stringify(chargeResponse)
-		}
-
-		Order.create(dataOrder).then( data=>{
+        }
+        
+        Order.create(dataOrder).then(data => {
 			res.json({
 				status:true,
 				pesan:"Berhasil Order",
 				data:data
-			});
+            });
 		}).catch( err=>{
 			res.json({
 				status: false,

@@ -1,11 +1,8 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('webservice', 'root', '', {
-  host: 'localhost',
+const sequelize = new Sequelize('sql6475570', 'sql6475570', 'hHuH3UuRd3', {
+  host: 'sql6.freemysqlhosting.net',
   dialect: 'mysql',
-      dialectOptions: {
-      useUTC: false, // for reading from database
-    },
   timezone: "+07:00"
 });
 

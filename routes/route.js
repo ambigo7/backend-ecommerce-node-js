@@ -7,7 +7,7 @@ router.use(bodyParser.json())
 router.get('/data', (req, res)=>{
     db.settings({timestampsInSnapshots: true})
     var allData = []
-    db.collection('products')
+    db.collection('orders')
     .get()
     .then(snapshot => {
         snapshot.forEach((hasil)=>{
@@ -20,22 +20,22 @@ router.get('/data', (req, res)=>{
     })
 })
 
-router.post('/data', (req, res)=>{
-    db.settings({
-        timestampsInSnapshots: true
-    })
-    db.collection('products').add({
-        nama: req.body.nama,
-        usia: req.body.usia,
-        kota: req.body.kota,
-        waktu: new Date()
-    })
-    res.send({
-        nama: req.body.nama,
-        usia: req.body.usia,
-        kota: req.body.kota,
-        waktu: new Date()
-    })
+router.post('/dataOrder', (req, res)=>{
+        db.settings({
+            timestampsInSnapshots: true
+        })
+        db.collection('order').add({
+            id:req.body.order_id,
+            tiket_id:req.body.tiket_id,
+            nama: req.body.nama,
+            //response_midtrans:JSON.stringify(chargeResponse)
+        })
+        res.send({
+            id:req.body.order_id,
+            tiket_id:req.body.tiket_id,
+            nama: req.body.nama,
+            //response_midtrans:JSON.stringify(chargeResponse)
+        })
 })
 
 module.exports = router

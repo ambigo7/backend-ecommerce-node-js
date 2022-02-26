@@ -7,8 +7,8 @@ const saksake = koneksi.define('order',
             type: Sequelize.STRING,
             primaryKey: true,
         },
-        tiket_id: {
-            type: Sequelize.INTEGER,
+        user_id: {
+            type: Sequelize.STRING,
             allowNull: false
         },
         nama: {
