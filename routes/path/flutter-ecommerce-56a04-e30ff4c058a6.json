@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flutter-ecommerce-56a04",
+  "private_key_id": "e30ff4c058a6312ed6ff6d4e3dbdcf47dcaa70ce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDcqg7PI6qG/1na\niaP6Ph9yEJ1Gbzqc7GFo9jxP5rG63V1Oe1fwlTODLyCc5I0l8Pf/C94bPkd7JuvQ\nNsNMTChNZBlX1xuqHuypTbVdW8kS1jAdKriWOU35U3rL9wUpKFGRm8Ha+SLFtvQ7\nCPyPgKk3wO8LS06MGXGsLMJ/tEjunS+1JQfehSIZGp5u0W9qfgAB60Cfvwe9Mri1\nuxt4cUHz4EaIzcioe7Vh8aX7UOoJLO+8gHYurSO8EW4/+xiAkh38MhR/m/nu7zyP\nWXELQYJovzELCfvg717PIAJSrZgcDRlsow06j+tiSRZVg+U7xZybKy5Gys5QXmPk\nRy+7j3fXAgMBAAECggEAC595gDekt8+jb/toA7pZ9awiXJ9nOvTIfLrbmmnQWsNm\nMsgUbbuuJu7IjPsM5D65EVoSrOSu5zG5ohIAX3hzdwAaxaGy91cBqDlLoEtBYBig\nGCkz59XE4akgArZUM0LIaR8HKv2Mc1Wbr7BdfUGNqD4lWTbyQDbm4ebJp+hbHxZX\naajqeuar91AIPXKgUR2hwTDqQq/lUKlcGxezfVOnlyOcxXq4U1YiY3fox05Iivkg\nOpKP2SGqpDxmq1g3+xhMDoFdBBEKDE8pynX6tXiQEDPPtSdVyTqt5nEqUasVOpXm\n2F24dlPrj4KxkHRkxG0oNx8tELIbCyBTzgdYDvQx4QKBgQD3s5RqrskIUBALuL5A\nw+ITWIelzo7u8arAdDsZJgOF7B7gtVRvaaeV2IcJP/EuTohdu8bnXPl9YQjWNICT\nu8zsysQ9C8fmZ0AGxjNs6eVdHouzF+cZgMBHsFhAUVbnig73xi6gpijiRkNMkeVC\niWm9Cy6B06tL+4HRx1UVWgoxFQKBgQDkDpe5FYuJLLZcUQFAw9T2ib9OnDniw+qx\nn0CiIm++Mjvqo8C0dTpV/+bizA4rLCHPuerqzNfbUCD/4zfTIeT+2miJoHf2EAx+\n726bKSBoRg63IS+36hY8tdbUe78wTFjMDMDlTvXgNyVy6XHAmLSFXQKXscaJXAcR\nyj8TF1eIOwKBgFvY5eatCvQfI+QEy98eAz1jLWFI920YhVU5hBRuKQ5GoKh39Ggf\niDmjAWdno1mlWyFOmJF/wy8/hNRQwYCGOZVwFlYAgU4o6O/aHIV9MURXKDvvWAz3\n1dR/SioHPy853RT5Ep8VHcHRhfDlhFoos+GaPNN9Fl5lUxzjSeRR78eFAoGAaQOX\nNfEH2diu+H+MligXDpeLckVaGmOg1L3CY2Z8EhbLpFZXTEGW5Tb7OIBCHfsqbp7r\n38cHtsOFDo+wixZWfkxQSt+LndDyEBls0yHy/FEWQZmUgZnXN4l8LUf2V+UwFnXg\n9TaQ3fhG1E1OxiMLLUYRBY0lIOcxki2RMddTxTUCgYEA1/OYvdmRgknEsLIQOxgG\nan5oWA2j6adtTM8l5XxiiDxGYwOOIGWpNXVE8Mt8oBYzMvJmERpAkVCeqZtsuLva\nYcUC3xq6dfInM9TSUV0ySMsSXNJAFLzkmKsyFaXArTKd9RizDlIAQFBVfOLb+Dcy\nI2mjkK2xhHpVuqwB9hUl3Cc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "express-app@flutter-ecommerce-56a04.iam.gserviceaccount.com",
+  "client_id": "108067320736194982946",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/express-app%40flutter-ecommerce-56a04.iam.gserviceaccount.com"
+}
