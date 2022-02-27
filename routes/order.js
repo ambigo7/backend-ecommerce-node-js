@@ -58,7 +58,7 @@ router.post('/charge', function(req,res,next){
 			res.json({
 				status:true,
 				pesan:"Berhasil Order",
-				data:data
+				data:chargeResponse
             });
 		}).catch( err=>{
 			res.json({

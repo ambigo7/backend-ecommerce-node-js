@@ -1,7 +1,8 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('sql6475570', 'sql6475570', 'hHuH3UuRd3', {
-  host: 'sql6.freemysqlhosting.net',
+const sequelize = new Sequelize('myoptikwebservice', 'admin', '0DiL69Ga', {
+  host: 'mysql-70386-0.cloudclusters.net',
+  port: 18812,
   dialect: 'mysql',
   timezone: "+07:00"
 });
