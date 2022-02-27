@@ -53,12 +53,23 @@ router.post('/charge', function(req,res,next){
 			response_midtrans: JSON.stringify(chargeResponse)
 		}
 		
-        Order.create(dataOrder).then(data => {
-			res.json({
-				status:true,
-				pesan: "Berhasil Order",
-				data:data
-            });
+		Order.create(dataOrder).then(data => {
+			if (chargeResponse.payment_type === "gopay") {
+				res.json({
+					status:true,
+					pesan: "Berhasil Order",
+					link_qr: chargeResponse.actions[0].url,
+					link_payment: chargeResponse.actions[1].url,
+					data:data
+            	});
+			} else { 
+				res.json({
+					status:true,
+					pesan: "Berhasil Order",
+					payment_type: chargeResponse.payment_type,
+					data:data
+            	});
+			}
 		}).catch( err=>{
 			res.json({
 				status: false,
@@ -112,12 +123,29 @@ router.get('/status/:order_id', function(req,res,next){
 		
 		Order.update({response_midtrans:responseMidtrans},{
 			where:{id:req.params.order_id}
-		}).then( ()=>{
-			res.json({
-				status:true,
-				pesan:"Berhasil cek status",
-				data:statusResponse
-			});
+		}).then(() => {
+			if (statusResponse.va_numbers) {
+				res.json({
+					status: true,
+					pesan: "Berhasil cek status",
+					bank: statusResponse.va_numbers[0].bank,
+					va_number: statusResponse.va_numbers[0].va_number,
+					data: statusResponse
+				});
+			} else if (statusResponse.permata_va_number) {
+				res.json({
+					status: true,
+					pesan: "Berhasil cek status",
+					permata_va_number: statusResponse.permata_va_number,
+					data: statusResponse
+				});
+			} else { 
+					res.json({
+					status: true,
+					pesan: "Berhasil cek status",
+					data: statusResponse
+				});
+			}
 		}).catch( err=>{
 			res.json({
 				status: false,
