@@ -49,16 +49,15 @@ router.post('/charge', function(req,res,next){
 		var dataOrder = {
 			id:chargeResponse.order_id,
 			user_id: req.body.user_id,
-			email:req.body.email,
-			nama:req.body.nama,
-			response_midtrans:JSON.stringify(chargeResponse)
-        }
-        
+			nama: req.body.nama,
+			response_midtrans: JSON.stringify(chargeResponse)
+		}
+		
         Order.create(dataOrder).then(data => {
 			res.json({
 				status:true,
-				pesan:"Berhasil Order",
-				data:chargeResponse
+				pesan: "Berhasil Order",
+				data:data
             });
 		}).catch( err=>{
 			res.json({
